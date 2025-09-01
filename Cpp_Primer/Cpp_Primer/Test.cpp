@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Test.h"
 
 using namespace std;
 
@@ -45,17 +46,51 @@ void Function02()
 // 2.缺省参数
 namespace Test02
 {
+	// 全缺省参数
 	void Function01(int a = 10, int b = 20, int c = 30)
 	{
 		cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
 	}
+
+	// 半缺省参数
+
+	void Function02(int a, int b = 20 , int c = 30)
+	{
+		cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+	}
+
+	void Test()
+	{
+		cout << "Function01" << endl;
+		Function01();
+		Function01(100);
+		Function01(100, 200);
+		Function01(100, 200, 300);
+
+		printf("\n");
+
+		cout << "Function02" << endl;
+		// Function02(); // error
+		Function02(100);
+		Function02(100, 200);
+		Function02(100, 200, 300);
+	}
+
+// 注意事项
+// 1.缺省参数只能从右向左依次设置
+// 2.函数声明和函数定义中只能有一个出现缺省参数
+// 在函数声明中出现缺省参数，函数定义中不能出现缺省参数
+// 缺省参数只能在函数声明中出现
+
+//预处理 -> 编译 -> 汇编 -> 链接
+//预处理阶段：	展开头文件，宏替换，条件编译，删除注释
+//编译阶段：		语法检查，生成汇编代码
+//汇编阶段：		生成目标文件
+//链接阶段：		连接目标文件，生成可执行文件
 }
 
 int main()
 {
-	Test02::Function01();
-	Test02::Function01(100);
-	Test02::Function01(100, 200);
-	Test02::Function01(100, 200, 300);
+	Test02::Test();
 	return 0;
 }
