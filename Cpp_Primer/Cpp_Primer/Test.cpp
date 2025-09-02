@@ -89,8 +89,43 @@ namespace Test02
 //链接阶段：		连接目标文件，生成可执行文件
 }
 
+// 3.函数重载
+
+namespace Test03
+{
+	// 参数的个数不同
+	void Function(int a)
+	{
+		cout << "Function(int a)" << endl;
+	}
+
+	// 参数的类型不同
+	void Function(double a)
+	{
+		cout << "Function(double a)" << endl;
+	}
+	// 参数的顺序不同（本质上还是类型不同）
+	void Function(int a, int b)
+	{
+		cout << "Function(int a, int b)" << endl;
+	}
+	void Function(double a, int b)
+	{
+		cout << "Function(double a, int b)" << endl;
+	}
+
+	void Test()
+	{
+		Function(10); // Function(int a)
+		Function(10.5); // Function(double a)
+		Function(10, 20); // Function(int a, int b)
+		Function(10.5, 20); // Function(double a, int b)
+	}
+}
+
+
 int main()
 {
-	Test02::Test();
+	Test03::Test();
 	return 0;
 }
