@@ -17,3 +17,11 @@ namespace Reference
 {
 	void TestReference();
 }
+
+namespace InlineFunction
+{
+	inline int Add(int a, int b);
+
+	// test entry for inline function
+	void TestInlineFunction();
+}

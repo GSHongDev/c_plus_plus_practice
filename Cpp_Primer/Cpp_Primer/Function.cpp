@@ -114,3 +114,49 @@ namespace Reference
 
 }
 
+// 7.Inline Function
+namespace InlineFunction
+{
+	// inline function
+	// 1. inline function is a function that is expanded in line when it is called
+	// 2. inline function can reduce the overhead of function call
+	// 3. inline function is usually used for small functions
+	// 4. inline function is just a request, the compiler may ignore it
+	// 5. inline function must be defined in header file
+	inline int Add(int a, int b)
+	{
+		return a + b;
+	}
+	void TestInlineFunction()
+	{
+		cout << "7.Inline Function" << endl;
+		cout << Add(1, 2) << endl;
+		printf("\n");
+	}
+}
+
+// 8.auto Type Deduction
+namespace AutoTypeDeduction
+{
+	// auto type deduction
+	// 1. auto is a keyword that can be used to declare a variable with automatic type deduction
+	// 2. auto can be used to simplify the declaration of complex types
+	// 3. auto can be used to avoid type conversion
+	// 4. auto can be used to improve code readability
+	// 5. auto can be used with initializer list
+	void TestAutoTypeDeduction()
+	{
+		cout << "8.auto Type Deduction" << endl;
+		auto a = 10; // int
+		auto b = 10.5; // double
+		auto c = 'c'; // char
+		auto d = "hello"; // const char*
+		auto e = true; // bool
+		cout << "a = " << a << endl;
+		cout << "b = " << b << endl;
+		cout << "c = " << c << endl;
+		cout << "d = " << d << endl;
+		cout << "e = " << e << endl;
+		printf("\n");
+	}
+}
