@@ -2,10 +2,18 @@
 #include "Function.h"
 
 
+//int main()
+//{	
+//	//FunctionOverloading::TestFunctionOverloading();
+//	//Reference::TestReference();
+//	//InlineFunction::TestInlineFunction();
+//	return 0;
+//}
+
+
 int main()
-{	
-	//FunctionOverloading::TestFunctionOverloading();
-	//Reference::TestReference();
-	InlineFunction::TestInlineFunction();
+{
+
+	ClassAndObjects::TestClassAndObjects();
 	return 0;
 }

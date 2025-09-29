@@ -25,3 +25,8 @@ namespace InlineFunction
 	// test entry for inline function
 	void TestInlineFunction();
 }
+
+namespace ClassAndObjects
+{
+	void TestClassAndObjects();
+}

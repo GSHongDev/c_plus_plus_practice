@@ -160,3 +160,42 @@ namespace AutoTypeDeduction
 		printf("\n");
 	}
 }
+
+
+/////////////////////////////////////////////////////////
+
+// C++ Primer
+// Chapter 02_Classes and Objects
+
+namespace ClassAndObjects
+{
+	class Date
+	{
+	private:
+		int _year;
+		int _month;
+		int _day;
+	
+	public:
+		void Init(int year, int month, int day)
+		{
+			_year = year;
+			_month = month;
+			_day = day;
+		}
+
+		void Print()
+		{
+			cout << _year << "-" << _month << "-" << _day << endl;
+		}
+	};
+
+	void TestClassAndObjects()
+	{
+		cout << "Chapter 02_Classes and Objects" << endl;
+		Date date;
+		date.Init(2025, 9, 29);
+		date.Print();
+		printf("\n");
+	}
+}
